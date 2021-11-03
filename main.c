@@ -12,8 +12,9 @@ int main()
     if (et!=1||st!=1||e<0||s<0) 
     {
     printf("UNFIXABLE USER ERROR\n");
-    printf("IGNORE OUTPUT\n");
-    }
+    printf("EXITING...\n");
+    return 1; 
+    } 
     if (e<s) 
     {
         int temp = s;
