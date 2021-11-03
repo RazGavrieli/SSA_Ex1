@@ -1,4 +1,4 @@
-.PHONY: all clean loopd loops recursived recursives
+.PHONY: all clean loopd loops recursived recursives 
 
 CC = gcc
 AR = ar -rcs
@@ -33,11 +33,11 @@ libclassrec.so: basicClassification.o advancedClassificationRecursion.o main.o
 	$(CC) $(FLAGS) -shared -o libclassrec.so basicClassification.o advancedClassificationLoop.o -lm
 
 ###finished files###
-mains: recursives main.o
+mains: libclassrec.a main.o
 	$(CC) $(FLAGS) main.o libclassrec.a -o mains -lm
-maindloop: loopd main.o 
+maindloop: libclassloops.so main.o 
 	$(CC) $(FLAGS) main.o ./libclassloops.so -o maindloop -lm
-maindrec: recursived main.o
+maindrec: libclassrec.so main.o
 	$(CC) $(FLAGS) main.o ./libclassrec.so -o maindrec -lm
 
 ###utilitis###
@@ -45,26 +45,3 @@ all: loops loopd recursived recursives mains maindloop maindrec
 
 clean:
 	rm -f *.o *.a *.so mains maindrec maindloop
-
-	
-	
-	
-
-# לשאול למה צריך מינוס אלאמ כשמשתמשים במתמטיקה 
-# לשאול איך להשתמש בספריות דינמית וסטטית מול המצגת
-
-
-# loopd: basicClassification.c advancedClassificationLoop.c 
-# 	gcc -c basicClassification.c advancedClassificationLoop.c 
-
-# maindloop: main.c loopd
-# 	gcc main.c -o maindloop -libclassloop
-
-# recur: advancedClassificationLoop.c
-# 	gcc advancedClassificationLoop.c -lm
-
-# run: a.out
-# 	./a.out
-
-
-
