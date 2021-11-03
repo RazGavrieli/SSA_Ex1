@@ -7,9 +7,15 @@ int main()
     int e=0;
 
     printf("enter two numbers");
-    scanf("%d", &s);
-    scanf("%d", &e);
-    if (e<s) {
+    int st= scanf("%d", &s);
+    int et= scanf("%d", &e);
+    if (et!=1||st!=1||e<0||s<0) 
+    {
+    printf("UNFIXABLE USER ERROR\n");
+    printf("IGNORE OUTPUT\n");
+    }
+    if (e<s) 
+    {
         int temp = s;
         s=e;
         e=temp;
