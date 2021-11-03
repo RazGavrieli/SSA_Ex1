@@ -6,7 +6,7 @@ int main()
     int s=0;
     int e=0;
 
-    printf("enter two numbers");
+    ///printf("enter two numbers");
     int st= scanf("%d", &s);
     int et= scanf("%d", &e);
     if (et!=1||st!=1||e<0||s<0) 
