@@ -21,7 +21,7 @@ libclassloop.a: basicClassification.o advancedClassificationLoop.o main.o
 	$(AR) libclassloop.a basicClassification.o advancedClassificationLoop.o
 	ranlib libclassloop.a
 recursives: libclassrec.a
-libclassrec.as: basicClassification.o advancedClassificationRecursion.o main.o
+libclassrec.a: basicClassification.o advancedClassificationRecursion.o main.o
 	$(AR) libclassrec.a basicClassification.o advancedClassificationRecursion.o
 	ranlib libclassrec.a
 #dynamic-
