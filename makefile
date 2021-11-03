@@ -23,10 +23,10 @@ recursived: basicClassification.c advancedClassificationRecursion.c main.c
 mains: libclassrec.a main.o
 	$(CC) $(FLAGS) main.o libclassrec.a -o mains -lm
 
-maindloop: main.o libclassloops.so 
+maindloop: main.o
 	$(CC) $(FLAGS) main.o ./libclassloops.so -o maindloop -lm
 
-maindrec: main.o libclassrec.so 
+maindrec: main.o 
 	$(CC) $(FLAGS) main.o ./libclassrec.so -o maindrec -lm
 
 all: 
