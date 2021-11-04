@@ -16,10 +16,10 @@ main.o: main.c NumClass.h
 
 ###creation of libraries:###
 #static-
-loops: libclassloop.a
-libclassloop.a: basicClassification.o advancedClassificationLoop.o main.o
-	$(AR) libclassloop.a basicClassification.o advancedClassificationLoop.o
-	ranlib libclassloop.a
+loops: libclassloops.a
+libclassloops.a: basicClassification.o advancedClassificationLoop.o main.o
+	$(AR) libclassloops.a basicClassification.o advancedClassificationLoop.o
+	ranlib libclassloops.a
 recursives: libclassrec.a
 libclassrec.a: basicClassification.o advancedClassificationRecursion.o main.o
 	$(AR) libclassrec.a basicClassification.o advancedClassificationRecursion.o
