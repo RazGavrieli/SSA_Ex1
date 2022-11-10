@@ -30,7 +30,7 @@ libclassloops.so: basicClassification.o advancedClassificationLoop.o main.o
 	$(CC) $(FLAGS) -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o -lm
 recursived: libclassrec.so
 libclassrec.so: basicClassification.o advancedClassificationRecursion.o main.o
-	$(CC) $(FLAGS) -shared -o libclassrec.so basicClassification.o advancedClassificationLoop.o -lm
+	$(CC) $(FLAGS) -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o -lm
 
 ###finished files###
 mains: libclassrec.a main.o
